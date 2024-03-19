@@ -6,7 +6,8 @@ export class FindAllUseCase {
 
     async run(): Promise<User[] | null> {
         try {
-            return await this.userRepository.findAllUsers();
+            const result = await this.userRepository.findAllUsers();
+            return result;
         } catch (error) {
             return null;
         }

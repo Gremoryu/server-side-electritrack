@@ -1,33 +1,9 @@
-// import dotenv from 'dotenv';
-// dotenv.config();
+import "dotenv/config";
+import express from "express";
 
-// import { ApolloServer } from '@apollo/server';
-// import {startStandaloneServer} from "@apollo/server/standalone"
+const app = express()
+const port = parseInt(process.env.PORT || "3000")
 
-// const typeDefs = `
-//     type User {
-//         id: ID,
-//         user: String,
-//         password: String,
-//         created_at: String,
-//         updated_at: String,
-//         deleted_at: String,
-//         deleted_by: String,
-//         deleted: Int,
-//     }
+app.use(express.json())
 
-//     type Query {
-//         users: [User]
-//     }
-
-// `;
-
-// const resolvers = {
-//     Query: {
-//         users: () => users,
-//     },
-
-// };
-
-// const port = process.env.CRUD_API_PORT
-
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -4,7 +4,7 @@ import { UserRepository } from "../domain/UserRepository";
 export class SaveUserUseCase {
     constructor(readonly userRepository: UserRepository) {}
 
-    async run(user: User): Promise<User[] | null> {
+    async run(user: User): Promise<User | null> {
         try {
             const userExists = await this.userRepository.findUserByUsername(user.user);
             if (userExists) {

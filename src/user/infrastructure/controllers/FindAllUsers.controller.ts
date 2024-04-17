@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { FindAllUseCase } from "../../application/FindAllUseCase";
+import { FindAllUsersUseCase } from "../../application/FindAllUsersUseCase";
 
-export class FindAllController {
-    constructor(readonly findAllUseCase: FindAllUseCase) { }
+export class FindAllUsersController {
+    constructor(readonly findAllUseCase: FindAllUsersUseCase) { }
 
     async run(req: Request, res: Response) {
         try {

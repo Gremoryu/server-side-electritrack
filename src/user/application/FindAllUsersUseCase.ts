@@ -1,7 +1,7 @@
 import { User } from "../domain/User";
 import { UserRepository } from "../domain/UserRepository";
 
-export class FindAllUseCase {
+export class FindAllUsersUseCase {
     constructor(readonly userRepository: UserRepository) {}
 
     async run(): Promise<User[] | null> {

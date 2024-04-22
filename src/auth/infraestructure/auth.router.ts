@@ -17,4 +17,4 @@ authRouter.post(
   registerAuthController.run.bind(registerAuthController)
 );
 
-export default  authRouter;
+export default authRouter;

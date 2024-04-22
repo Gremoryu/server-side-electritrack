@@ -1,4 +1,4 @@
-import {User} from "../../../user/domain/User";
+import { User } from "../../../user/domain/User";
 import { UserRepository } from "../../../user/domain/UserRepository";
 import { AuthResponse } from "../../domain/entities";
 import { createContrasenaHash, createJwt } from "../utils";
@@ -13,7 +13,7 @@ export class RegisterAuthService {
           const password = createContrasenaHash(user1.password);
           const newUser = {
             ...user1,
-            contrasena: password,
+            password,
           };
           const responseUser: any = await this.userRepository.save(newUser);
           const jwt = createJwt(responseUser)

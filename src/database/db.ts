@@ -7,8 +7,7 @@ import mysql from 'mysql2/promise'; // Import mysql module
 
 export const connection = mysql.createPool({
     host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
-    waitForConnections: true,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
 });

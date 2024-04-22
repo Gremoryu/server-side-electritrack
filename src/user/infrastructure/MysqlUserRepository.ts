@@ -13,7 +13,7 @@ export class MysqlUserRepository implements UserRepository {
 
     async findUserByUsername(username: string): Promise<User | null> {
         const [rows]: any = await connection.query(
-            "SELECT * FROM users WHERE username = ?",
+            "SELECT * FROM users WHERE user = ?",
             [username]
         );
         return rows[0];
